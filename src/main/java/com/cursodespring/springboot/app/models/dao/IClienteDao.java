@@ -6,4 +6,5 @@ import com.cursodespring.springboot.app.models.entity.Cliente;
 
 public interface IClienteDao {
 	public List<Cliente> findAll();
+	
 }
