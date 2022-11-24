@@ -10,7 +10,7 @@
 	<h1 th:text="${titulo}" class="text-center"></h1>
 	<div class="container">
 		<form th:action="@{/form}" th:object="${cliente}" method="post">
-			<table>
+			<table class="table table-bordered">
 				<tr>
 					<td>Nombre</td>
 					<td>
@@ -30,12 +30,18 @@
 					</td>
 				</tr>
 				<tr>
+					<td>Fecha</td>
+					<td>
+						<input type="text" th:field="*{createdAt}"/>
+					</td>
+				</tr>
+				<tr>
 					<td>
 						<input type="submit" value="Crear cliente" class="btn btn-primary"> 
 					</td>
 				</tr>
 			</table>
-			
+			<input type="hidden" th:field="*{id}"/>
 		</form>
 	</div>
 	<!-- JavaScript Bundle with Popper -->
