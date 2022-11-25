@@ -33,6 +33,7 @@
 					<th>Correo Electrónico</th>
 					<th>Fecha</th>
 					<th>Editar</th>
+					<th>Eliminar</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -43,6 +44,7 @@
 					<td th:text="${cliente.email}"></td>
 					<td th:text="${cliente.createdAt}"></td>
 					<td><a th:href="@{/form/} + ${cliente.id}" th:text="'Editar'" class="btn btn-primary btn-xs"></a></td>
+					<td><a th:href="@{/eliminar/} + ${cliente.id}" th:text="'Eliminar'" class="btn btn-danger btn-xs"></a></td>
 				</tr>
 			</tbody>
 		</table>
