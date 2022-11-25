@@ -14,25 +14,29 @@
 				<tr>
 					<td>Nombre</td>
 					<td>
-						<input type="text" th:field="*{nombre}" class="form-control"/>
+						<input type="text" th:field="*{nombre}" class="form-control" th:errorclass="'form-control alert-danger'"/>
+						<small th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="form-text text-danger"></small>
 					</td>
 				</tr>
 				<tr>
 					<td>Apellido</td>
 					<td>
-						<input type="text" th:field="*{apellido}" class="form-control"/>
+						<input type="text" th:field="*{apellido}" class="form-control" th:errorclass="'form-control alert-danger'"/>
+						<small th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}" class="form-text text-danger"></small>
 					</td>
 				</tr>
 				<tr>
 					<td>Email</td>
 					<td>
-						<input type="email" th:field="*{email}" class="form-control"/>
+						<input type="email" th:field="*{email}" class="form-control" th:errorclass="'form-control alert-danger'"/>
+						<small th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="form-text text-danger"></small>
 					</td>
 				</tr>
 				<tr>
 					<td>Fecha</td>
 					<td>
-						<input type="text" th:field="*{createdAt}"/>
+						<input type="text" th:field="*{createdAt}" th:errorclass="'form-control alert-danger'"/>
+						<small th:if="${#fields.hasErrors('createdAt')}" th:errors="*{createdAt}" class="form-text text-danger"></small>
 					</td>
 				</tr>
 				<tr>
@@ -41,7 +45,7 @@
 					</td>
 				</tr>
 			</table>
-			<input type="hidden" th:field="*{id}"/>
+			
 		</form>
 	</div>
 	<!-- JavaScript Bundle with Popper -->
